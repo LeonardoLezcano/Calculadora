@@ -1,7 +1,11 @@
-const displayValorAnterior = document.getElementsByClassName("valor_anterior");
-const displayValorActual = document.getElementsByClassName("valor_actual");
+const displayValorAnterior = document.getElementById("valor_anterior");
+const displayValorActual = document.getElementById("valor_actual");
 const botonesNumeros = document.querySelectorAll(".numero");
 const botonesOperadores = document.querySelectorAll(".operador");
+const display = new Display(displayValorAnterior, displayValorActual);
 
-const calculadora = new Calculadora();
-console.log(calculadora.sumar(2, 2));
+botonesNumeros.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    display.agregarNumero(boton.innerHTML);
+  });
+});

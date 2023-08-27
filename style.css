@@ -55,9 +55,9 @@ button:focus {
   word-break: break-all;
   box-shadow: 0px 0px 0px 10px #00000033;
 }
-.valor_actual {
+#valor_actual {
   font-size: 1.5em;
 }
-.valor_anterior {
+#valor_anterior {
   font-size: 2em;
 }
